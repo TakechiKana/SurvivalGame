@@ -7,11 +7,12 @@ using UnityEngine.AI;
 
 public class PlayerMove : MonoBehaviour
 {
-    private GameObject clickedGameObject;
+    private GameObject clickedGameObject;//クリックした位置にあるゲームオブジェクト
     private Animator PlayerAnimator;    //アニメーション
     private Vector3 targetPos;          //移動する位置
     private Vector3 velocity;           //移動速度
     private float dis;
+    private bool isMine = false;        //採掘中か
 
     private NavMeshAgent m_agent;      //ナビメッシュエージェント(Player)
 
@@ -34,31 +35,58 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var c_pos = Input.mousePosition;
-        c_pos.z = 10.0f;
-        Vector3 c_pos3D = Camera.main.ScreenToWorldPoint(c_pos);
-        //Debug.Log(c_pos3D);
-        if (Input.GetMouseButtonDown(0))
-        {
-            //Debug.Log("click");
-            //targetPos = c_pos3D;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit = new RaycastHit();
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                clickedGameObject = hit.collider.gameObject;
-            }
-            Debug.Log(clickedGameObject.tag);
-        }
-
+        Touch();
         Move();
         PlayAnimation();
+    }
+    private void Touch()
+    {
+        if (Application.isEditor)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit = new RaycastHit();
+
+                if (Physics.Raycast(ray, out hit))
+                {
+                    clickedGameObject = hit.collider.gameObject;
+                    targetPos = hit.point;
+                }
+                Debug.Log(clickedGameObject.tag);
+            }
+        }
+        else
+        {
+            if (Input.touchCount > 0)
+            {
+                // タッチ情報の取得
+                Touch touch = Input.GetTouch(0);
+
+                if (touch.phase == TouchPhase.Began)
+                {
+                    Ray ray = Camera.main.ScreenPointToRay(touch.position);
+                    RaycastHit hit = new RaycastHit();
+                    if (Physics.Raycast(ray, out hit))
+                    {
+                        clickedGameObject = hit.collider.gameObject;
+                        targetPos = hit.point;
+                    }
+                    Debug.Log(clickedGameObject.tag);
+                }
+            }
+        }
+
+
     }
     //移動処理
     private void Move()
     {
         if(clickedGameObject == null)
+        {
+            return;
+        }
+        if(isMine  == true)
         {
             return;
         }
@@ -71,8 +99,14 @@ public class PlayerMove : MonoBehaviour
             {
                 m_agent.isStopped = true;
                 clickedGameObject = null;
+                isMine = true;
             }
             
+        }
+        else if(clickedGameObject.tag == "Ground")
+        {
+            m_agent.isStopped = false;
+            m_agent.SetDestination(targetPos);
         }
         else
         {
@@ -84,5 +118,23 @@ public class PlayerMove : MonoBehaviour
     private void PlayAnimation()
     {
         PlayerAnimator.SetFloat("MoveSpeed", m_agent.velocity.sqrMagnitude);
+        PlayerAnimator.SetBool("isMining", isMine);
+        Debug.Log(isMine);
+        //ステート名がMinigで、ループ回数が2より上の時
+        if (PlayerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Mining"))
+        {
+            if (PlayerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 2)
+            {
+                isMine = false;
+            }
+        }
+    }
+
+    private void GetMaterials()
+    {
+        if(clickedGameObject.name == "Tree")
+        {
+            
+        }
     }
 }

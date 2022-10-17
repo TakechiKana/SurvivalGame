@@ -346,6 +346,8 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/Script/GameCamera.cs"
+"Assets/Script/Item.cs"
+"Assets/Script/ItemDataBase.cs"
 "Assets/Script/PlayerMove.cs"
 "Assets/Script/SunCycle.cs"
 -langversion:9.0
