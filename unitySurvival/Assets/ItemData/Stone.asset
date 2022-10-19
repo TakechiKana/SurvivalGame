@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Stone
   m_EditorClassIdentifier: 
   kindOfItem: 0
-  itemCodeName: 0
   itemIcon: {fileID: 0}
   itemName: "\u77F3"
   itemInfo: "\u9053\u5177\u4F5C\u308A\u306B\u5F79\u7ACB\u3061\u305D\u3046\u3002"
+  itemEffect: "\u30AF\u30E9\u30D5\u30C8\u8CC7\u6750\u3002"
+  itemID: 1

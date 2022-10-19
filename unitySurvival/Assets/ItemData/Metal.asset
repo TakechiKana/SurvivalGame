@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Metal
   m_EditorClassIdentifier: 
   kindOfItem: 0
-  itemCodeName: 0
   itemIcon: {fileID: 0}
   itemName: "\u91D1\u5C5E"
   itemInfo: "\u65B0\u3057\u304F\u4F5C\u308C\u308B\u3082\u306E\u304C\u5897\u3048\u305D\u3046\u3002"
+  itemEffect: "\u30AF\u30E9\u30D5\u30C8\u8CC7\u6750\u3002"
+  itemID: 2

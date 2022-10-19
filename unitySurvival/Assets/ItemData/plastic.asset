@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kindOfItem: 0
   itemIcon: {fileID: 0}
-  itemName: 
-  itemInfo: 
+  itemName: "\u30D7\u30E9\u30B9\u30C1\u30C3\u30AF"
+  itemInfo: "\u30B4\u30DF\u304B\u3089\u53D6\u308C\u305F\u3002\u4F55\u304B\u306B\u306F\u4F7F\u3048\u305D\u3046\u3002"
+  itemEffect: "\u30AF\u30E9\u30D5\u30C8\u8CC7\u6750\u3002"
+  itemID: 4
