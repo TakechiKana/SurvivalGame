@@ -359,6 +359,7 @@
 "Assets/Script/MainScene/GameCamera.cs"
 "Assets/Script/MainScene/SunCycle.cs"
 "Assets/Script/Materils/Tree.cs"
+"Assets/Script/Materils/Wood.cs"
 "Assets/Script/Player/PlayerBasic.cs"
 "Assets/Script/Player/PlayerInventoryManager.cs"
 -langversion:9.0

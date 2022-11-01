@@ -4,15 +4,38 @@ using UnityEngine;
 
 public class PlayerInventoryManager : MonoBehaviour
 {
-    [SerializeField]
-    public Dictionary<Item.ItemID, int> itemQuantity = new Dictionary<Item.ItemID, int>();
-    public void SetItemQuantity(Item.ItemID itemID,int num)
+    //[SerializeField]
+    //public Dictionary<Item, int> itemQuantity = new Dictionary<Item, int>();
+    private Item item;
+    //private ItemDataBase itemDataBase = default;
+    
+    public int[] itemQuantity = new int[17];
+    private void Start()
     {
-        itemQuantity[itemID] = num;
-        Debug.Log(itemQuantity[itemID]);
+        for(int i=0;i<17;i++)
+        {
+            itemQuantity[i] = 0;
+        }
     }
-    public int GetItemQuantity(Item.ItemID itemID)
+    public void SetItemQuantity(int id,int num)
     {
-        return itemQuantity[itemID];
+        itemQuantity[id] = num;
     }
+    //public void SetItemQuantity(string itemID,int num)
+    //{
+    //    for(int i = 0;i< itemDataBase.GetItemLists().Count;i++)
+    //    {
+    //        if (itemDataBase.GetItemLists()[i].GetItemID() == itemID)
+    //        {
+    //            item = itemDataBase.GetItemLists()[i];
+    //            break;
+    //        }
+    //    }
+    //    itemQuantity[item] = num;
+    //    Debug.Log(itemQuantity[item]);
+    //}
+    //public int GetItemQuantity(Item item)
+    //{
+    //    return itemQuantity[item];
+    //}
 }

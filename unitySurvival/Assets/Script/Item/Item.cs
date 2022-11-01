@@ -12,26 +12,6 @@ public class Item : ScriptableObject
         Foods,
         Drinks
     }
-    public enum ItemID
-    {
-        wood,
-        stone,
-        metal,
-        grass,
-        plastic,
-        fiber,
-        cup,
-        hammmer,
-        fishingRod,
-        waterFilter,
-        campFire,
-        electronicParts,
-        apple,
-        water,
-        seawater,
-        fish,
-        grilledFish
-    }
     //アイテムの種類
     [SerializeField]
     private KindOfItem kindOfItem = default;
@@ -49,7 +29,7 @@ public class Item : ScriptableObject
     private string itemEffect;
     //アイテムの効果
     [SerializeField]
-    private ItemID itemID;
+    private string itemID;
     public KindOfItem GetKindOfItem()
     {
         return kindOfItem;
@@ -70,7 +50,7 @@ public class Item : ScriptableObject
     {
         return itemEffect;
     }
-    public ItemID GetItemID()
+    public string GetItemID()
     {
         return itemID;
     }
