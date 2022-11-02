@@ -30,10 +30,10 @@ public class Wood : MonoBehaviour
         //プレイヤーと接触したとき
         if(other.CompareTag("Player"))
         {
-            //木の数を増やす
-            inventory.GetComponent<PlayerInventoryManager>().SetItemQuantity(arrayNum, woodNum);
-            //自身を削除
-            Destroy(this.gameObject);
+            ////木の数を増やす
+            //inventory.GetComponent<PlayerInventoryManager>().SetItemQuantity(arrayNum, woodNum);
+            ////自身を削除
+            //Destroy(this.gameObject);
         }
     }
 }

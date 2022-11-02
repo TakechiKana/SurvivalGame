@@ -30,6 +30,9 @@ public class Item : ScriptableObject
     //アイテムの効果
     [SerializeField]
     private string itemID;
+    //アイテムのプレハブ
+    [SerializeField]
+    private GameObject itemObj;
     public KindOfItem GetKindOfItem()
     {
         return kindOfItem;
@@ -53,5 +56,9 @@ public class Item : ScriptableObject
     public string GetItemID()
     {
         return itemID;
+    }
+    public GameObject GetGameObj()
+    {
+        return itemObj;
     }
 }

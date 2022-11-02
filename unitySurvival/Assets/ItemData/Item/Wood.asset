@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wood
   m_EditorClassIdentifier: 
   kindOfItem: 0
-  itemIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  itemIcon: {fileID: 21300000, guid: 7ef11454b75cf7144a7c8fb2fd8ed28b, type: 3}
   itemName: "\u6728\u6750"
   itemInfo: "\u30B5\u30D0\u30A4\u30D0\u30EB\u306E\u57FA\u672C\u3002\u306A\u3093\u3067\u3082\u4F5C\u308C\u305D\u3046\u3002"
   itemEffect: "\u30AF\u30E9\u30D5\u30C8\u8CC7\u6750\u3002"

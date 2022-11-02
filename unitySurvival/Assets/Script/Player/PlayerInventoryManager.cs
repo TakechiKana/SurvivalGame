@@ -4,38 +4,32 @@ using UnityEngine;
 
 public class PlayerInventoryManager : MonoBehaviour
 {
-    //[SerializeField]
-    //public Dictionary<Item, int> itemQuantity = new Dictionary<Item, int>();
-    private Item item;
-    //private ItemDataBase itemDataBase = default;
-    
-    public int[] itemQuantity = new int[17];
-    private void Start()
+	//　アイテムデータベース
+	[SerializeField]
+	private ItemDataBase itemDataBase;
+	//　アイテム数管理
+	private Dictionary<Item, int> numOfItem = new Dictionary<Item, int>();
+
+	// Use this for initialization
+	void Start()
+	{
+
+		for (int i = 0; i < itemDataBase.GetItemLists().Count; i++)
+		{
+			//　アイテム数初期化
+			numOfItem.Add(itemDataBase.GetItemLists()[i], 0);
+		}
+	}
+
+	public void SetNumOfItem(Item item,int num)
     {
-        for(int i=0;i<17;i++)
-        {
-            itemQuantity[i] = 0;
-        }
-    }
-    public void SetItemQuantity(int id,int num)
-    {
-        itemQuantity[id] = num;
-    }
-    //public void SetItemQuantity(string itemID,int num)
-    //{
-    //    for(int i = 0;i< itemDataBase.GetItemLists().Count;i++)
-    //    {
-    //        if (itemDataBase.GetItemLists()[i].GetItemID() == itemID)
-    //        {
-    //            item = itemDataBase.GetItemLists()[i];
-    //            break;
-    //        }
-    //    }
-    //    itemQuantity[item] = num;
-    //    Debug.Log(itemQuantity[item]);
-    //}
-    //public int GetItemQuantity(Item item)
-    //{
-    //    return itemQuantity[item];
-    //}
+		//アイテム数追加
+		numOfItem.Add(itemDataBase.GetItemLists(), 0);
+	}
+
+	//　名前でアイテムを取得
+	public Item GetItem(string searchName)
+	{
+		return itemDataBase.GetItemLists().Find(itemName => itemName.GetItemName() == searchName);
+	}
 }
