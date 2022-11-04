@@ -13,7 +13,6 @@ public class PlayerInventoryManager : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-
 		for (int i = 0; i < itemDataBase.GetItemLists().Count; i++)
 		{
 			//　アイテム数初期化
@@ -23,8 +22,16 @@ public class PlayerInventoryManager : MonoBehaviour
 
 	public void SetNumOfItem(Item item,int num)
     {
-		//アイテム数追加
-		numOfItem.Add(itemDataBase.GetItemLists(), 0);
+    	//カウント
+    	numOfItem[item] = numOfItem[item] + num;
+		//デバッグ用
+		Debug.Log(item.GetItemName());
+		Debug.Log(numOfItem[item]);
+	}
+
+	public int GetNumOfItem(Item item)
+    {
+		return numOfItem[item];
 	}
 
 	//　名前でアイテムを取得
