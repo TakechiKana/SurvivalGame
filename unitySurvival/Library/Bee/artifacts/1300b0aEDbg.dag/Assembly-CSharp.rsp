@@ -356,6 +356,7 @@
 -r:"Library/Bee/artifacts/1300b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/Script/Item/Item.cs"
 "Assets/Script/Item/ItemDataBase.cs"
+"Assets/Script/MainScene/CreatePrefabs.cs"
 "Assets/Script/MainScene/GameCamera.cs"
 "Assets/Script/MainScene/SunCycle.cs"
 "Assets/Script/Materials/Materials.cs"
