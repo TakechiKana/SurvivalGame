@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Hammer
   m_EditorClassIdentifier: 
   kindOfItem: 1
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 3e0bdeb53d5735946a56fc3229df6c5f, type: 3}
   itemName: "\u30CF\u30F3\u30DE\u30FC"
   itemInfo: "\u77F3\u3067\u3067\u304D\u305F\u30CF\u30F3\u30DE\u30FC\u3002"
   itemEffect: "\u91D1\u5C5E\u3092\u53D6\u308B\u3053\u3068\u304C\u3067\u304D\u308B\u3002"
-  itemID: hammer

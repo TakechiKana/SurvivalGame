@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Grass
   m_EditorClassIdentifier: 
   kindOfItem: 0
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: e2b610f8204ac224c81b55154ac035e1, type: 3}
   itemName: "\u8349"
   itemInfo: "\u7E4A\u7DAD\u304C\u3057\u3063\u304B\u308A\u3057\u305F\u5927\u304D\u306A\u8349\u3002"
   itemEffect: "\u7CF8\u3092\u4F5C\u308A\u51FA\u305B\u308B\u3002"
-  itemID: grass

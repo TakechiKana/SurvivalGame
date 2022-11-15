@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: CampFire
   m_EditorClassIdentifier: 
   kindOfItem: 1
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: eed99b53bc18afc42a844a27b87cf0c1, type: 3}
   itemName: "\u305F\u304D\u706B"
-  itemInfo: "\u8FD1\u304F\u306B\u3044\u308B\u3068\u6696\u304B\u3044\u3002\u4F55\u304B\u713C\u3051\u305D\u3046\uFF01"
+  itemInfo: "\u6696\u304B\u3044\u3002\u4F55\u304B\u713C\u3051\u305D\u3046\uFF01"
   itemEffect: "\u9B5A\u3092\u713C\u304F\u3053\u3068\u304C\u3067\u304D\u308B"
-  itemID: campFire
