@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(NavMeshAgent))]
 
@@ -42,6 +43,10 @@ public class PlayerBasic: MonoBehaviour
     private void Touch()
     {
         if(isMine)
+        {
+            return;
+        }
+        if(EventSystem.current.IsPointerOverGameObject())
         {
             return;
         }
