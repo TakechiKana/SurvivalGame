@@ -3,17 +3,20 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CraftBookButton
     - CraftItemIcon
-    - CreatePrefabs
     - GameCamera
+    - HandInventory
     - Item
     - ItemCraft
     - ItemDataBase
     - ItemEffect
     - ItemName
+    - JoyStick_Move
     - Materials
-    - PlayerBasic
+    - MiningButton
     - PlayerInventoryManager
+    - PlayerMove
     - SunCycle
+    - SwitchBook
     - rawMaterials
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -23,19 +26,30 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.GridLayoutGroup
+    - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Mask
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Text
@@ -65,6 +79,8 @@ ScriptsOnlyBuild:
     - UnityEngine.TextCore.GlyphMetrics
     - UnityEngine.TextCore.GlyphRect
     UnityEngine.UI:
+    - UnityEngine.EventSystems.EventTrigger/Entry
+    - UnityEngine.EventSystems.EventTrigger/TriggerEvent
     - UnityEngine.UI.AnimationTriggers
     - UnityEngine.UI.Button/ButtonClickedEvent
     - UnityEngine.UI.ColorBlock
@@ -80,6 +96,30 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: CraftBookButton
     methodName: ButtonPush
+  - assembly: Assembly-CSharp
+    fullTypeName: CraftBookButton
+    methodName: ButtonPush
+  - assembly: Assembly-CSharp
+    fullTypeName: CraftBookButton
+    methodName: ButtonPush
+  - assembly: Assembly-CSharp
+    fullTypeName: JoyStick_Move
+    methodName: Move
+  - assembly: Assembly-CSharp
+    fullTypeName: JoyStick_Move
+    methodName: PointerUp
+  - assembly: Assembly-CSharp
+    fullTypeName: JoyStick_Move
+    methodName: PointDown
+  - assembly: Assembly-CSharp
+    fullTypeName: MiningButton
+    methodName: PushButton
+  - assembly: Assembly-CSharp
+    fullTypeName: MiningButton
+    methodName: PushButton
+  - assembly: Assembly-CSharp
+    fullTypeName: SwitchBook
+    methodName: PushButton
   sceneClasses:
     Assets/Scenes/MainScene.unity:
     - Class: 1
@@ -125,63 +165,75 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1552}
     - Class: 114
-      Script: {instanceID: 1660}
+      Script: {instanceID: 1726}
     - Class: 114
-      Script: {instanceID: 2224}
+      Script: {instanceID: 2228}
     - Class: 114
-      Script: {instanceID: 2560}
+      Script: {instanceID: 2574}
     - Class: 114
-      Script: {instanceID: 2662}
+      Script: {instanceID: 2676}
     - Class: 114
-      Script: {instanceID: 2766}
+      Script: {instanceID: 2724}
     - Class: 114
-      Script: {instanceID: 2794}
+      Script: {instanceID: 2782}
     - Class: 114
-      Script: {instanceID: 2834}
+      Script: {instanceID: 2810}
     - Class: 114
-      Script: {instanceID: 2890}
+      Script: {instanceID: 2850}
     - Class: 114
-      Script: {instanceID: 2900}
+      Script: {instanceID: 2906}
     - Class: 114
-      Script: {instanceID: 3152}
+      Script: {instanceID: 2916}
     - Class: 114
-      Script: {instanceID: 3208}
+      Script: {instanceID: 3170}
     - Class: 114
-      Script: {instanceID: 3258}
+      Script: {instanceID: 3230}
     - Class: 114
-      Script: {instanceID: 3396}
+      Script: {instanceID: 3260}
     - Class: 114
-      Script: {instanceID: 3756}
+      Script: {instanceID: 3282}
     - Class: 114
-      Script: {instanceID: 3948}
+      Script: {instanceID: 3422}
     - Class: 114
-      Script: {instanceID: 4044}
+      Script: {instanceID: 3784}
     - Class: 114
-      Script: {instanceID: 4082}
+      Script: {instanceID: 3978}
     - Class: 114
-      Script: {instanceID: 4182}
+      Script: {instanceID: 4074}
     - Class: 114
-      Script: {instanceID: 4294}
+      Script: {instanceID: 4112}
     - Class: 114
-      Script: {instanceID: 4568}
+      Script: {instanceID: 4202}
     - Class: 114
-      Script: {instanceID: 4972}
+      Script: {instanceID: 4214}
     - Class: 114
-      Script: {instanceID: 5352}
+      Script: {instanceID: 4326}
     - Class: 114
-      Script: {instanceID: 5632}
+      Script: {instanceID: 4602}
     - Class: 114
-      Script: {instanceID: 5970}
+      Script: {instanceID: 5016}
     - Class: 114
-      Script: {instanceID: 6470}
+      Script: {instanceID: 5316}
     - Class: 114
-      Script: {instanceID: 7122}
+      Script: {instanceID: 5398}
     - Class: 114
-      Script: {instanceID: 7604}
+      Script: {instanceID: 5680}
     - Class: 114
-      Script: {instanceID: 8342}
+      Script: {instanceID: 6020}
     - Class: 114
-      Script: {instanceID: 26052}
+      Script: {instanceID: 6534}
+    - Class: 114
+      Script: {instanceID: 7190}
+    - Class: 114
+      Script: {instanceID: 7316}
+    - Class: 114
+      Script: {instanceID: 7590}
+    - Class: 114
+      Script: {instanceID: 7676}
+    - Class: 114
+      Script: {instanceID: 8286}
+    - Class: 114
+      Script: {instanceID: 8428}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -379,6 +431,12 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionEnterMessageListener
   - hash:
       serializedVersion: 2
+      Hash: bb38119be7043d522251ff8412f0d57e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SwitchBook
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -493,7 +551,7 @@ ScriptsOnlyBuild:
     className: VertexShakeA
   - hash:
       serializedVersion: 2
-      Hash: 0865dbcf04ec6bd8c9947fa3bee6f6d4
+      Hash: 45d474a3d9e75711e16cbf882b868f93
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: rawMaterials
@@ -515,6 +573,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: Benchmark04
+  - hash:
+      serializedVersion: 2
+      Hash: 3111c78c91897e1cf6048ba12c17cde0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: JoyStick_Move
   - hash:
       serializedVersion: 2
       Hash: 6bc63253e62944b843c43efcca12bfbf
@@ -622,7 +686,7 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PlayerBasic
+    className: PlayerMove
   - hash:
       serializedVersion: 2
       Hash: 2574ac7d50617d23cdefe4ad22f5e1ad
@@ -677,6 +741,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SunCycle
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HandInventory
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1048,7 +1118,7 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Display
+    className: NotThrough
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -1177,6 +1247,12 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ItemCraft
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1255,6 +1331,12 @@ ScriptsOnlyBuild:
     className: VertexZoom
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MiningButton
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1295,12 +1377,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ItemCraft
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity

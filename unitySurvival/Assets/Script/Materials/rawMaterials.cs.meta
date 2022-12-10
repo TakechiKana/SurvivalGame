@@ -3,7 +3,10 @@ guid: 9e1d300a5852b41469c25ecbd9b693e0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - createObj: {instanceID: 0}
+  - playerObj: {fileID: 9028320865160588076, guid: a9c4c01030b87d641b969b9a7621cc48, type: 3}
+  - MiningEffect: {fileID: 3553635320032551278, guid: aad6b1d89e6f497468bab9e511d87c98, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

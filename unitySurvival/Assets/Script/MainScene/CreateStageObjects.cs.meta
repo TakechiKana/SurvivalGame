@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1e1dac6289a666243b316e982c924b72
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - treeObj: {fileID: 1681669007549506669, guid: 52cd0afc4dfe70d4880cbb15fda0788d, type: 3}
+  - rockObj: {instanceID: 0}
+  - metalObj: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

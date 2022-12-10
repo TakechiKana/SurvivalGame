@@ -9,12 +9,14 @@ public class PlayerInventoryManager : MonoBehaviour
 	private ItemDataBase itemDataBase;
 	//　アイテム数管理
 	private Dictionary<Item, int> numOfItem = new Dictionary<Item, int>();
+	//最初にハンマーをセットする
+	public Item hammer;
 
 
 	// Use this for initialization
 	void Start()
 	{
-		
+		numOfItem.Add(hammer, 1);
 	}
 
 	public void SetNumOfItem(Item item,int num)
@@ -38,15 +40,19 @@ public class PlayerInventoryManager : MonoBehaviour
     }
 
 	//　名前でアイテムを取得
-	public Item GetItem(string searchName)
+	public bool IsHavingItem(Item item)
 	{
-		return itemDataBase.GetItemLists().Find(itemName => itemName.GetItemName() == searchName);
+		if (numOfItem.ContainsKey(item))
+		{
+			return true;
+		}
+		return false;
 	}
 
 	public void SearchHaveItem(Item item)
     {
 		//取得したアイテムがインベントリにあるか検索する。
-		if(numOfItem.ContainsKey(item))
+		if(IsHavingItem(item))
         {
 			return;
         }
